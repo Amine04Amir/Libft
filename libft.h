@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 09:28:38 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/13 14:53:52 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/14 15:35:29 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strchr(const char *s, int character);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strdup(const char *s);
-char	*ft_substr(char const *s, unsigned int start, size_t len):
+//char	*ft_substr(char const *s, unsigned int start, size_t len):
 
 #endif

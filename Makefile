@@ -6,7 +6,7 @@
 #    By: mamir <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/13 10:56:29 by mamir             #+#    #+#              #
-#    Updated: 2023/11/13 14:49:41 by mamir            ###   ########.fr        #
+#    Updated: 2023/11/14 13:06:18 by mamir            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,8 @@ all: $(NAME)
 $(NAME) : $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 clean : 
-	rm $(OBJ)
+	rm -f $(OBJ)
 fclean : clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 
 re : fclean all

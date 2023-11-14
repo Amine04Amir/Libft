@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:45:36 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/07 12:58:56 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/14 16:20:29 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	dst[i] = '\0';
-	return (src_len);
+	return (i);
 }

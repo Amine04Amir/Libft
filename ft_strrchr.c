@@ -24,4 +24,4 @@ char	*ft_strrchr(const char *str, int c)
 		i--;
 	}
 	return (NULL);
-}	
+}

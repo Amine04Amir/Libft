@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:49:38 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/11 12:37:39 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/15 10:42:30 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 	p = s;
 	uc = (unsigned char)c;
+	i = 0;
 	while (i < n)
 	{
 		if (p[i] == uc)

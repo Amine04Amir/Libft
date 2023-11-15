@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 15:53:58 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/13 17:32:45 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/15 11:28:52 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	total_size;
 
 	total_size = 0;
-	ptr = malloc(total_size);
 	total_size = nmemb * size;
+	ptr = malloc(total_size);
 	if (nmemb != 0 && total_size / nmemb != size)
 	{
 		return (NULL);

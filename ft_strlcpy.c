@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:45:36 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/14 16:20:29 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/15 10:56:28 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	{
 		src_len++;
 	}
-	while (i < (size - 1) && src[i] != '\0')
+	while (i < (size - 1) && src[i] != '\0' && size > 0)
 	{
 		dst[i] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (i);
+	if (size > 0)
+		dst[i] = '\0';
+	return (src_len);
 }

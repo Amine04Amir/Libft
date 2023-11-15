@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:45:52 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/11 20:17:59 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/15 11:44:19 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	while (*big && len >= little_len)
 	{
-		if (ft_strncmp(big, little, little_len))
+		if (!ft_strncmp(big, little, little_len))
 		{		
 			return ((char *)big);
 		}	

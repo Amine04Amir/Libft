@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 17:17:30 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/15 10:59:51 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/15 14:17:20 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last_occ;
-
-	last_occ = NULL;
-	while (*s != '\0')
+	int	i;
+	
+	i = ft_strlen(str);
+	while (i >= 0)
 	{
-		if (*s == c)
-		{
-			last_occ = s;
-		}
-		s++;
+		if (str[i] == (char)c)
+			return ((char*)str + i);
+		i--;
 	}
-	if (*s == c)
-	{
-		last_occ = s;
-	}
-	return ((char *)last_occ);
-}
+	return (NULL);
+}	

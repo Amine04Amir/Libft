@@ -6,44 +6,50 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 18:15:31 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/16 21:28:50 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/17 11:32:51 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*ft_strcpy(char *dest, const char *src)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
+	size_t	i;
 	size_t	len1;
 	size_t	len2;
-	size_t		i;
-	size_t		j;
-	const char	join;
+	char	*p;
 
+	if (!s1 && !s2)
+		return (NULL);
+	else if (!s1)
+		return (ft_strdup(s2));
+	else if (!s2)
+		return (ft_strdup(s1));
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	join = malloc(len1 + len2 + 1);
-	i = 0;
-	j = 0;
-	if (!join)
+	p = (char *)malloc (sizeof(char) * (len1 + len2 + 1));
+	if (!p)
 		return (NULL);
-	while (j < len1)
-		join[i++] == s1[j++];
-	while (j < len2)
-		join[i++] = s2[j++];
-	join[i] = '\0';
-	return (join);
+	ft_strcpy(p, s1);
+	i = 0;
+	while (s2[i])
+	{
+		p[len1++] = s2[i++];
+	}
+	p[len1] = '\0';
+	return (p);
 }
-int main() {
-    const char *first = "Hello, ";
-    const char *second = "world!";
-
-    char *result = ft_strjoin(first, second);
-    if (result != NULL) {
-        printf("Concatenated string: %s\n", result);
-        free(result);
-    }
-
-    return 0;
-}
-

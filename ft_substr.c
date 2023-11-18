@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 14:28:38 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/15 14:43:05 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/18 13:18:21 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,21 +36,18 @@ static char	*ft_fill(char const *s, unsigned int start, size_t len)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*ptr;
 	size_t	j;
 
 	j = 0;
 	if (!s)
 		return (NULL);
 	if (len > ft_strlen(s) - start)
+	{
 		len = ft_strlen(s) - start;
+	}
 	if (ft_strlen(s) <= start)
 	{
-		ptr = malloc(1 * sizeof(char));
-		if (!ptr)
-			return (NULL);
-		ptr[j] = '\0';
-		return (ptr);
+		return (ft_strdup(""));
 	}
 	return (ft_fill(s, start, len));
 }

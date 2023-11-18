@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 09:28:38 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/17 11:07:11 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/18 13:15:58 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strchr(const char *s, int character);
 char	*ft_strrchr(const char *str, int c);
-char	*ft_strdup(const char *s);
+char	*ft_strdup(const char *s1);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);

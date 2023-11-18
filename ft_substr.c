@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 14:28:38 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/18 13:29:45 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/18 15:26:09 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	j;
+	size_t	i;
 	char	*ptr;
 
-	j = 0;
+	i = 0;
 	if (!s)
 		return (NULL);
 	if (len > ft_strlen(s) - start)
@@ -29,11 +29,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	while (s[start] != '\0' && len > 0)
 	{
-		ptr[j] = s[start];
-		j++;
+		ptr[i] = s[start];
+		i++;
 		len--;
 		start++;
 	}
-	ptr[j] = '\0';
+	ptr[i] = '\0';
 	return (ptr);
 }

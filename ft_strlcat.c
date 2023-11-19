@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 12:53:46 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/11 16:03:30 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/19 18:02:28 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,25 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	dest_len;
-	size_t	src_len;
-	size_t	total_len;
-	size_t	copy_len;
+	size_t	dlen;
+	size_t	slen;
+	size_t	i;
+	size_t	j;
 
-	dest_len = ft_strlen(dest);
-	src_len = ft_strlen(src);
-	total_len = dest_len + src_len;
-	copy_len = 0;
-	if (size <= dest_len)
-		return (size + src_len);
-	copy_len = size - dest_len - 1;
-	if (src_len < copy_len)
+	i = 0;
+	if (dest == NULL && size == 0)
+		return (ft_strlen(src) + size);
+	j = ft_strlen(dest);
+	dlen = ft_strlen(dest);
+	slen = ft_strlen(src);
+	if (size == 0 || size <= dlen)
+		return (slen + size);
+	while (src[i] != '\0' && i < size - dlen - 1)
 	{
-		copy_len = src_len;
+		dest[j] = src[i];
+		i++;
+		j++;
 	}
-	ft_memcpy(dest + dest_len, src, copy_len);
-	dest[dest_len + copy_len] = '\0';
-	return (total_len);
+	dest[j] = '\0';
+	return (dlen + slen);
 }

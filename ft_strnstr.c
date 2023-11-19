@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:45:52 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/15 11:44:19 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/19 18:13:58 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	little_len;
 
 	little_len = ft_strlen(little);
+	//if (!big || !little)
+	//	return (NULL);
+	if (!big && little && len == 0)
+		return (NULL);
 	if (little_len == 0)
 	{
 		return ((char *)big);

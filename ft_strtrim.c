@@ -6,26 +6,22 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 14:17:56 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/20 09:04:40 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:41:35 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	in(char const *str, char c)
-{
-	while (*str && c != *str)
-		str++;
-	return (c == *str);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	first;
-	size_t	last;
-	char	*trim_str;
+	size_t	i;
 
-	first = 0;
-	last = ft_strlen(s1);
-	trim_str = ft_substr(s1, first, last - first);
-}	
+	if (!s1 || !set)
+		return (NULL);
+	while (ft_strchr(set, *s1) && *s1 != '\0')
+		s1++;
+	i = ft_strlen((char *)s1);
+	while (ft_strchr(set, s1[i]) && i != 0)
+		i--;
+	return (ft_substr((char *)s1, 0, i + 1));
+}

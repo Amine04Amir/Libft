@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 12:50:06 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/14 15:57:11 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/20 11:41:03 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,9 @@ int	ft_toupper(int i)
 	}
 	return (i);
 }
+/*#include <stdio.h>
+int main()
+{
+	int i = 'a';
+	printf("Before:%c\nUppercased: %c",i ,ft_toupper(i));
+}*/

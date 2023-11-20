@@ -6,13 +6,14 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 09:28:38 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/20 11:41:20 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/20 12:45:10 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);

@@ -6,23 +6,23 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:29:42 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/21 17:22:22 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/21 17:29:21 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	numlen(long num)
+static int	numlen(long n)
 {
 	int	i;
 
 	i = 0;
-	if (num <= 0)
+	if (n <= 0)
 	{
 		n = -n;
-		i++;	
+		i++;
 	}
-	while (num)
+	while (n)
 	{
 		i++;
 		n /= 10;
@@ -62,7 +62,7 @@ static char	*res_define(char *res, int len, long n)
 	return (res);
 }
 
-char	*ft_itoa(int num)
+char	*ft_itoa(int n)
 {
 	long	num;
 	char	*res;
@@ -70,7 +70,7 @@ char	*ft_itoa(int num)
 
 	num = n;
 	len = numlen(num);
-	res = ft_strnew(len + 1);
+	res = new_str(len + 1);
 	if (!res)
 		return (NULL);
 	return (res_define(res, len, num));

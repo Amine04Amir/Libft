@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 15:29:42 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/21 17:41:10 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/22 11:57:06 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static char	*new_str(size_t size)
 	return (res);
 }
 
-static char	*res_define(char *res, int len, long n)
+static char	*rep_str(char *res, int len, long n)
 {
 	if (n == 0)
 	{
@@ -73,5 +73,5 @@ char	*ft_itoa(int n)
 	res = new_str(len + 1);
 	if (!res)
 		return (NULL);
-	return (res_define(res, len, num));
+	return (rep_str(res, len, num));
 }

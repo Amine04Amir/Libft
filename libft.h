@@ -6,7 +6,7 @@
 /*   By: mamir <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 09:28:38 by mamir             #+#    #+#             */
-/*   Updated: 2023/11/23 15:04:49 by mamir            ###   ########.fr       */
+/*   Updated: 2023/11/23 15:31:01 by mamir            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strchr(const char *s, int character);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strdup(const char *s1);

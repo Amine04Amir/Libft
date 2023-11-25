@@ -12,6 +12,13 @@
 
 #include "libft.h"
 
+static int	count()
+{
+}
+static char	*checknull(char *p, int n)
+{
+	if (n > 0)
+
 char **ft_split(char const *s, char c)
 {
 

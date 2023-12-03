@@ -19,3 +19,21 @@ int	ft_isascii(int i)
 	else
 		return (0);
 }
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	int i = 10;
+// 	int j = 128;
+
+// 	if (ft_isascii(i) == 1)
+// 		printf("%d: isascii\n", i);
+// 	else
+// 		printf("%d: is not ascii\n", i);
+// 	if (ft_isascii(j) == 1)
+// 		printf("%d: isascii\n", j);
+// 	else
+// 		printf("%d: is not ascii\n", j);
+// 	return 0;
+// }

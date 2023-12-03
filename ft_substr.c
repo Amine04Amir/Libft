@@ -18,22 +18,29 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptr;
 
 	i = 0;
-	if (!s)
+	if (!s) // Null check
 		return (NULL);
-	if (len > ft_strlen(s) - start)
+	if (len > ft_strlen(s) - start) // length adjustment
 		len = ft_strlen(s) - start;
-	if (ft_strlen(s) <= start)
+	if (ft_strlen(s) <= start) // empty string
 		return (ft_strdup(""));
-	ptr = (char *)malloc((len + 1) * sizeof(char));
-	if (!ptr)
+	ptr = (char *)malloc((len + 1) * sizeof(char)); // mem alloc
+	if (!ptr) // check for malloc success
 		return (NULL);
-	while (s[start] != '\0' && len > 0)
+	while (s[start] != '\0' && len > 0) // substr extraction
 	{
-		ptr[i] = s[start];
+		ptr[i] = s[start]; // begin from the start index
 		i++;
 		len--;
 		start++;
 	}
-	ptr[i] = '\0';
+	ptr[i] = '\0'; // null terminate the substr
 	return (ptr);
 }
+
+// int main()
+// {
+// 	char s[] = "Hello world!";
+// 	char *ptr = ft_substr(s, 6, 6);
+// 	printf("Substr: %s\n", ptr);
+// }

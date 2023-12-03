@@ -20,6 +20,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	j;
 
 	i = 0;
+
 	if (dest == NULL && size == 0)
 		return (ft_strlen(src) + size);
 	j = ft_strlen(dest);
@@ -36,3 +37,13 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[j] = '\0';
 	return (dlen + slen);
 }
+
+// int main()
+// {
+// 	char src[] = " world!";
+// 	char dest[] = "Hello";
+
+// 	ft_strlcat(dest, src, 0);
+
+// 	printf("Cat: %s\n", dest);
+// }

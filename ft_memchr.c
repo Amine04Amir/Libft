@@ -31,3 +31,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	char str[] = "Start to search";
+// 	char *res = ft_memchr(str, 's', 15);
+// 	printf(" 's' found at position: %ld\n", res - str);
+// 	printf("s -> : %s\n", res);
+// }

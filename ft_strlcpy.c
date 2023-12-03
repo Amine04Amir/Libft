@@ -32,3 +32,13 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = '\0';
 	return (src_len);
 }
+
+// int main()
+// {
+// 	char src[] = "saminamina";
+// 	char dest[20];
+
+// 	ft_strlcpy(dest, src, 0);
+// 	printf("src_len : %zu\n", ft_strlcpy(dest, src, 0));
+// 	printf("src_len : %s\n", dest);
+// }

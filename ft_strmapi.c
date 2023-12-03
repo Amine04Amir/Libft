@@ -33,3 +33,19 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	p[i] = '\0';
 	return (p);
 }
+
+// char	lower(unsigned int i, char c)
+// {
+// 	if(c >= 'A' && c <= 'Z')
+// 		c += 32;
+// 	return (c);
+// }
+
+// int main()
+// {
+// 	char str[] = "SUIIII";
+// 	char *p = ft_strmapi(str, lower);
+// 	printf("%s\n", p);
+// 	free(p); // Don't forget to free the allocated memory
+// 	return 0;
+// }

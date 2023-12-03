@@ -18,3 +18,12 @@ int	ft_tolower(int i)
 	}
 	return (i);
 }
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	int i = 'A';
+
+// 	printf("Before: %c\nAfter: %c\n", i, ft_tolower(i));
+// }

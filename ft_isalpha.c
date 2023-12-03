@@ -19,3 +19,21 @@ int	ft_isalpha(int i)
 	else
 		return (0);
 }
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	int	i = 'a';
+// 	int	j = '1';
+
+// 	if (ft_isalpha(i) == 1)
+// 		printf("%c: is alpha\n", i);
+// 	else
+// 		printf("%c: isn't\n", i);
+// 	if (ft_isalpha(j) == 1)
+// 		printf("%c: is alpha\n", j);
+// 	else
+// 		printf("%c: isn't\n", j);
+// 	return 0;
+// }

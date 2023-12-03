@@ -16,23 +16,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 
-	if (!s1 || !set)
-		return (NULL);
-	while (ft_strchr(set, *s1) && *s1 != '\0')
-		s1++;
-	i = ft_strlen((char *)s1);
-	while (ft_strchr(set, s1[i]) && i != 0)
-		i--;
-	return (ft_substr((char *)s1, 0, i + 1));
+	if (!s1 || !set) // One of them is empty
+		return (NULL);//return NULL
+	while (ft_strchr(set, *s1) && *s1 != '\0')//skip matching 'set' chars in s1 
+		s1++; // move ptr until != 'set' or reach end
+	i = ft_strlen((char *)s1); // calc length of s1
+	while (ft_strchr(set, s1[i]) && i != 0) // begin from the end and search for 'set'
+		i--; // iterate backwards
+	return (ft_substr((char *)s1, 0, i + 1)); // create the trimmed string 
 }
 
-/*#include <stdio.h>
-int main()
-{
-	char test[] = "123Hello, World!123";
-	char trim[] = "123";
+// int main()
+// {
+// 	char str[] = "12345Hello, World12345";
+// 	char set[] = "12345";
 
-	printf("Original str: %s\n", test);
-	char *trimmed = ft_strtrim(test, trim);
-	printf("Trimmed-str: %s", trimmed);
-}*/
+// 	char *res = ft_strtrim(str, set);
+// 	printf("Trimmed str: %s\n", res);
+// }

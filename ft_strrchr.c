@@ -25,3 +25,12 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	char str[] = "Hello World";
+// 	int i = 'W';
+
+// 	printf("Where : %s\n", ft_strrchr(str, i));
+// 	return 0;
+// }

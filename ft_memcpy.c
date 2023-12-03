@@ -30,3 +30,20 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+/* No-overlap */
+// int main()
+// {
+// 	char src[] = "Hello World";
+// 	char dst[20];
+
+// 	ft_memcpy(dst, src, 5);
+// 	printf("Dest: %s\n", dst);
+// }
+/* With-overlap */
+// int main()
+// {
+// 	char src[] = "abcdefg";
+// 	ft_memcpy(src+2, src, 3);
+// 	printf("Joe who : %s\n", src+2);
+// }

@@ -34,3 +34,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	char big[] = "Hello World!";
+// 	char little[] = "lo";
+// 	printf("%s\n",ft_strnstr(big, little, 5));
+// }

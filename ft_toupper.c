@@ -18,9 +18,11 @@ int	ft_toupper(int i)
 	}
 	return (i);
 }
-/*#include <stdio.h>
-int main()
-{
-	int i = 'a';
-	printf("Before:%c\nUppercased: %c",i ,ft_toupper(i));
-}*/
+
+// #include <stdio.h>
+
+// int main()
+// {
+// 	int i = 'a';
+// 	printf("Before: %c\nAfter: %c\n",i ,ft_toupper(i));
+// }

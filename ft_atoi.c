@@ -39,3 +39,9 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
+
+// int main()
+// {
+// 	char str[] = "    123@@@45";
+// 	printf("%d\n",ft_atoi(str));
+// }

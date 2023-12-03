@@ -29,3 +29,11 @@ char	*ft_strchr(const char *s, int character)
 		return ((char *)&s[i]);
 	return (NULL);
 }
+
+// int main()
+// {
+// 	char str[] = "Ana kan9aleb 3la c";
+// 	int character = 'c';
+
+// 	printf("the first occ : %s\n",ft_strchr(str, character));
+// }

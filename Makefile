@@ -27,8 +27,11 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME) : $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
 
+.o.c:
+	$(CC) $(CFLAGS) -c $<
+	ar rcs $(NAME) $@
+	
 clean : 
 	rm -f $(OBJ)
 

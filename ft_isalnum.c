@@ -23,3 +23,20 @@ int	ft_isalnum(int i)
 	else
 		return (0);
 }
+// #include <stdio.h>
+// int main()
+// {
+// 	int i = 'a';
+// 	int j = '@';
+
+// 	if (ft_isalnum(i) == 1)
+// 		printf("%c : is alnum \n",i);
+// 	else
+// 		printf("%c : isn't \n",i);
+// 	ft_isalnum(j);
+// 	if (ft_isalnum(j) == 1)
+// 		printf("%c : is alnum \n",j);
+// 	else
+// 		printf("%c : isn't \n",j);
+// 	return 0;
+// }

@@ -21,10 +21,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	d = dest;
 	s = src;
 	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	if (!n || dest == src)
+	if (dest == src)
 		return (dest);
+	// if (!n || dest == src)
+	// 	return (dest);
+
 	if (d > s)
 		while (n-- > 0)
 			d[n] = s[n];
@@ -38,3 +39,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
+
+// int main()
+// {
+// 	char src[] = "Hello, mama";
+// 	char dest[20];
+
+// 	ft_memmove(dest, src, 5);
+// 	printf("%s", dest);
+// }
